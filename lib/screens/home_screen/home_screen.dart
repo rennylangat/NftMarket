@@ -13,6 +13,7 @@ class _HomeScreenState extends State<HomeScreen> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
+      backgroundColor: Colors.grey.shade100,
       appBar: AppBar(
         backgroundColor: Colors.white,
         elevation: 0,
@@ -131,9 +132,41 @@ class _HomeScreenState extends State<HomeScreen> {
                           fontWeight: FontWeight.w700),
                     ),
                     IconButton(
-                        onPressed: () {},
-                        icon: Icon(Icons.volume_down_outlined))
+                      onPressed: () {},
+                      icon: Icon(Icons.volume_down_outlined),
+                    )
                   ],
+                ),
+                Container(
+                  width: SizeConfig.screenWidth,
+                  height: SizeConfig.screenHeight * 0.6,
+                  child: ListView(
+                    children: [
+                      Container(
+                        decoration: BoxDecoration(
+                          color: Colors.white,
+                          borderRadius: BorderRadius.all(
+                            Radius.circular(12),
+                          ),
+                        ),
+                        child: Padding(
+                          padding: const EdgeInsets.all(8.0),
+                          child: Column(
+                            children: [
+                              Container(
+                                width: SizeConfig.screenWidth,
+                                height: SizeConfig.screenHeight * 0.27,
+                                decoration: BoxDecoration(
+                                    image: DecorationImage(
+                                        image: NetworkImage(
+                                            "https://picsum.photos/200"))),
+                              )
+                            ],
+                          ),
+                        ),
+                      )
+                    ],
+                  ),
                 )
               ],
             ),
