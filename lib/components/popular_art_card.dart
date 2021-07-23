@@ -37,7 +37,7 @@ class PopularArtCard extends StatelessWidget {
                 child: Container(
                   width: SizeConfig.screenWidth * 0.2,
                   decoration: BoxDecoration(
-                      color: Colors.white.withOpacity(0.5),
+                      color: Colors.white.withOpacity(0.7),
                       borderRadius: BorderRadius.all(Radius.circular(14))),
                   child: Padding(
                     padding: const EdgeInsets.all(4.0),
@@ -59,6 +59,7 @@ class PopularArtCard extends StatelessWidget {
                         Icon(
                           Icons.fireplace_sharp,
                           color: Colors.yellow.shade800,
+                          size: 22,
                         )
                       ],
                     ),

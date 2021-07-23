@@ -66,7 +66,7 @@ class _HomeScreenState extends State<HomeScreen> {
                       fontWeight: FontWeight.w800),
                 ),
                 Text(
-                  "For You",
+                  "Art For You",
                   style: TextStyle(
                       color: Colors.black,
                       fontSize: getProportionateScreenHeight(24),
@@ -113,7 +113,7 @@ class _HomeScreenState extends State<HomeScreen> {
                         child: Icon(
                           Icons.settings_applications,
                           color: Colors.white,
-                          size: 32,
+                          size: 34,
                         ),
                       ),
                     ),
