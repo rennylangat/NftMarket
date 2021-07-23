@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:nunua_nft/components/popular_art_card.dart';
 import 'package:nunua_nft/constants.dart';
 import 'package:nunua_nft/size_config.dart';
 
@@ -142,29 +143,19 @@ class _HomeScreenState extends State<HomeScreen> {
                   height: SizeConfig.screenHeight * 0.6,
                   child: ListView(
                     children: [
-                      Container(
-                        decoration: BoxDecoration(
-                          color: Colors.white,
-                          borderRadius: BorderRadius.all(
-                            Radius.circular(12),
-                          ),
-                        ),
-                        child: Padding(
-                          padding: const EdgeInsets.all(8.0),
-                          child: Column(
-                            children: [
-                              Container(
-                                width: SizeConfig.screenWidth,
-                                height: SizeConfig.screenHeight * 0.27,
-                                decoration: BoxDecoration(
-                                    image: DecorationImage(
-                                        image: NetworkImage(
-                                            "https://picsum.photos/200"))),
-                              )
-                            ],
-                          ),
-                        ),
-                      )
+                      PopularArtCard(),
+                      SizedBox(
+                        height: getProportionateScreenHeight(10),
+                      ),
+                      PopularArtCard(),
+                      SizedBox(
+                        height: getProportionateScreenHeight(10),
+                      ),
+                      PopularArtCard(),
+                      SizedBox(
+                        height: getProportionateScreenHeight(10),
+                      ),
+                      PopularArtCard(),
                     ],
                   ),
                 )
@@ -172,6 +163,20 @@ class _HomeScreenState extends State<HomeScreen> {
             ),
           ),
         ),
+      ),
+      bottomNavigationBar: BottomNavigationBar(
+        selectedItemColor: kPrimaryColor,
+        unselectedItemColor: Colors.black,
+        items: <BottomNavigationBarItem>[
+          BottomNavigationBarItem(
+              icon: Icon(Icons.home_outlined), label: "Home"),
+          BottomNavigationBarItem(
+              icon: Icon(Icons.home_outlined), label: "Favorites"),
+          BottomNavigationBarItem(
+              icon: Icon(Icons.shopping_basket_outlined), label: "Cart"),
+          BottomNavigationBarItem(
+              icon: Icon(Icons.person_outline_outlined), label: "Account"),
+        ],
       ),
     );
   }
