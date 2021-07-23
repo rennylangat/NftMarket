@@ -165,15 +165,16 @@ class _HomeScreenState extends State<HomeScreen> {
         ),
       ),
       bottomNavigationBar: BottomNavigationBar(
+        type: BottomNavigationBarType.fixed,
         selectedItemColor: kPrimaryColor,
         unselectedItemColor: Colors.black,
         items: <BottomNavigationBarItem>[
           BottomNavigationBarItem(
               icon: Icon(Icons.home_outlined), label: "Home"),
           BottomNavigationBarItem(
-              icon: Icon(Icons.home_outlined), label: "Favorites"),
+              icon: Icon(Icons.favorite_border_outlined), label: "Favorites"),
           BottomNavigationBarItem(
-              icon: Icon(Icons.shopping_basket_outlined), label: "Cart"),
+              icon: Icon(Icons.shopping_cart_outlined), label: "Cart"),
           BottomNavigationBarItem(
               icon: Icon(Icons.person_outline_outlined), label: "Account"),
         ],
